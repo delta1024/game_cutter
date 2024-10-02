@@ -1,0 +1,52 @@
+GIT
+  remote: https://github.com/delta1024/raylib_ruby.git
+  revision: 78818ad5f22a5706c7bdaea08d3ed546186d0756
+  specs:
+    raylib (0.5.0)
+      ffi (~> 1.17)
+
+PATH
+  remote: .
+  specs:
+    game_cutter (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.17.0)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-aarch64-linux-musl)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm-linux-musl)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux-musl)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
+    logger (1.6.1)
+    rake (13.2.1)
+    rbs (3.6.0)
+      logger
+
+PLATFORMS
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  ruby
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
+
+DEPENDENCIES
+  game_cutter!
+  rake (~> 13.0)
+  raylib (~> 0.5.0)!
+  rbs (~> 3.6)
+
+BUNDLED WITH
+   2.5.20
