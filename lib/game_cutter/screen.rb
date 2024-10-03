@@ -1,7 +1,13 @@
+require 'raylib'
 module GameCutter
   class Screen
     attr_reader   :game 
     attr_accessor :background
+    def initialize(game, background: Raylib::Colors::RAYWHITE)
+      @objects = []
+      @game = game
+      @background = background
+    end
     def update
       if should_close
         game.should_close = true

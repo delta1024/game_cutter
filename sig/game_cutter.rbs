@@ -23,6 +23,7 @@ module GameCutter
     attr_reader   game       : Game
     attr_accessor background : Raylib::Color
 
+    def initialize   : (Game game, ?background: Raylib::Color) -> void
     def update       : () -> void
     def draw         : () -> void
     private
