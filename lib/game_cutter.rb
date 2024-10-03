@@ -7,4 +7,5 @@ module GameCutter
   class Error < StandardError; end
   autoload(:Game, "game_cutter/game")
   autoload(:Window, "game_cutter/window")
+  autoload(:Screen, "game_cutter/screen")
 end

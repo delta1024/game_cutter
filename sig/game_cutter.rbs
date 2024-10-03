@@ -12,17 +12,30 @@ module GameCutter
     def spawn      : ({} -> void) -> void
     def draw       : ({} -> void) -> void
   end
-  interface _Screen
+
+  interface _GameObj
+    def update : (Game) -> void
+    def draw   : () -> void
+  end
+
+  class Screen
+    @objects                 : Array[_GameObj]
+    attr_reader   game       : Game
+    attr_accessor background : Raylib::Color
+
     def update       : () -> void
     def draw         : () -> void
+    private
+    def should_close : () -> bool
   end
+
   class Game 
-    @screen                    : _Screen
+    @screen                    : Screen
     attr_reader   window       : Window
     attr_accessor should_close : bool
 
     def run           : () -> void
-    def change_screen : (_Screen) -> void
+    def change_screen : (Screen) -> void
     private
     def update        : () -> void
     def draw          : () -> void
