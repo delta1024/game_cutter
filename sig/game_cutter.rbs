@@ -1,4 +1,30 @@
 module GameCutter
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+  class Window
+    @setup                  : () -> void?
+    attr_accessor log_level : Symbol?
+    attr_reader   width     : Integer
+    attr_reader   height    : Integer
+    attr_reader   title     : String
+    attr_reader   fps       : Integer
+
+    def initialize : (Integer width, Integer height, String title, ?setup: {} -> void, ?fps: Integer ) -> void
+    def spawn      : ({} -> void) -> void
+    def draw       : ({} -> void) -> void
+  end
+  interface _Screen
+    def update : () -> void
+    def draw   : () -> void
+  end
+  class Game 
+    @screen                    : _Screen
+    attr_reader   window       : Window
+    attr_accessor should_close : bool
+
+    def run           : () -> void
+    def change_screen : (_Screen) -> void
+    private
+    def update        : () -> void
+    def draw          : () -> void
+  end
 end
