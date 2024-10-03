@@ -13,8 +13,8 @@ module GameCutter
     def draw       : ({} -> void) -> void
   end
   interface _Screen
-    def update : () -> void
-    def draw   : () -> void
+    def update       : () -> void
+    def draw         : () -> void
   end
   class Game 
     @screen                    : _Screen
