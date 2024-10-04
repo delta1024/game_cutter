@@ -8,4 +8,5 @@ module GameCutter
   autoload(:Game, "game_cutter/game")
   autoload(:Window, "game_cutter/window")
   autoload(:Screen, "game_cutter/screen")
+  autoload(:EventBus, "game_cutter/event_bus")
 end
