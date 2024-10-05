@@ -32,4 +32,18 @@ module GameCutter
       Raylib.window_should_close
     end
   end
+  class OverlayScreen < Screen
+    def initialize(game, screen)
+      @game = game
+      @screen = screen
+      @objects = []
+    end
+    def draw
+      @screen.draw()
+      message_size = Raylib.measure_text @text, @font_size
+      tx = game.window.width / 2 - message_size / 2
+      ty = game.window.height / 2 - @font_size / 2
+      Raylib.draw_text @text, tx, ty, @font_size, @color
+    end
+  end
 end
